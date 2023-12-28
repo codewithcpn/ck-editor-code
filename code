@@ -1,0 +1,45 @@
+
+=======================CDN Links====================================== 
+<script src="https://cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
+
+  <script>
+        CKEDITOR.replace( 'editor1' );
+   </script>
+
+===============Add all the code on header section============================
+
+
+====================use body tag=======================
+
+<div class="row mt-3">
+    <div class="col">
+    <textarea class="form-control" name="content" id="editor" placeholder="Type Post Content here.."><?= $records->content;?></textarea>
+    <span class="text-danger"><?= form_error('content')?></span>
+    </div>
+</div>
+
+====================End use body tag=======================
+
+=================Add this code on footer section==============
+
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .then( editor => {
+                console.log( editor );
+        } )
+        .catch( error => {
+                console.error( error );
+        } );
+   </script>
+
+=================Add this code on footer section==============
+
+
+
+
+
+
+
+
+
